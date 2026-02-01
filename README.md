@@ -1,6 +1,7 @@
 # LangChain Chat with Redis Memory
 
 A simple conversational AI chatbot with persistent Redis memory management, powered by LangChain.
+<img width="1439" height="730" alt="Screenshot 2026-02-01 at 10 32 49 PM" src="https://github.com/user-attachments/assets/dfc82f22-649f-48ae-b036-885c460efee5" />
 
 ## Features
 
@@ -53,27 +54,7 @@ python src/main_redis.py
 ```
 
 ## Architecture   
-┌─────────────────────────┐
-│   Streamlit UI / CLI    │
-└────────────┬────────────┘
-             │
-┌────────────▼────────────┐
-│    LangChain Chat       │
-│    (RedisMemoryChat)    │
-└────────────┬────────────┘
-             │
-┌────────────▼────────────┐
-│   Redis Memory Store    │
-│  • Chat History         │
-│  • Session Management   │
-│  • TTL Cleanup          │
-└────────────┬────────────┘
-             │
-┌────────────▼────────────┐
-│   Redis Server          │
-│   (localhost:6379)      │
-└─────────────────────────┘  
-
+<img width="428" height="804" alt="image" src="https://github.com/user-attachments/assets/b52cbcc9-7615-4c7d-849b-985871128526" />
 
 ## Configuration
 
