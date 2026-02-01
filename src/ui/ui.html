@@ -1,0 +1,193 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+
+[data-testid="stAppViewContainer"] {
+    background: #f5f5f7;
+    color: #111827;
+}
+
+[data-testid="stAppViewContainer"] > .block-container {
+    padding-top: 0;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    width: 320px !important;
+    background: #ffffff !important;
+    border-right: 1px solid #e5e7eb;
+}
+section[data-testid="stSidebar"] > div:first-child {
+    background: #ffffff;
+}
+
+/* Main chat shell */
+.chat-shell {
+    max-width: 960px;
+    margin: 1.5rem auto;
+    padding: 0 1.5rem;
+}
+
+.chat-card {
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+    display: flex;
+    flex-direction: column;
+    height: 4em;
+}
+
+
+.chat-card-header {
+    padding: 0.9rem 1.3rem 0.3rem 1.3rem;
+    border-bottom: 1px solid #f1f5f9;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    height: 4em;
+}
+.chat-card-header-title {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #111827;
+}
+.chat-card-header-sub {
+    font-size: 0.78rem;
+    color: #6b7280;
+}
+
+.chat-empty {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    text-align: center;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.chat-empty h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #111827;
+}
+.chat-empty p {
+    margin: 0;
+    font-size: 0.82rem;
+    color: #6b7280;
+}
+
+.stChatMessage {
+    padding: 0.7rem 0.85rem;
+    border-radius: 0.85rem;
+    margin-bottom: 0.5rem;
+    max-width: 88%;
+    font-size: 0.9rem;
+}
+
+.stChatMessage[data-testid*="user"] {
+    margin-left: auto;
+    background: #2563eb;
+    color: #f9fafb;
+    border-radius: 0.9rem 0.9rem 0.2rem 0.9rem;
+}
+
+.stChatMessage[data-testid*="assistant"] {
+    margin-right: auto;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    color: #111827;
+    border-radius: 0.9rem 0.9rem 0.9rem 0.2rem;
+}
+
+.chat-input-wrap {
+    padding: 0.7rem 1.2rem 1rem 1.2rem;
+    border-top: 1px solid #f1f5f9;
+    background: #ffffff;
+}
+
+.stChatInputContainer {
+    padding: 0 !important;
+}
+.stChatInput {
+    border-radius: 999px !important;
+    background: #f3f4f6 !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: none !important;
+}
+.stChatInput input {
+    border-radius: 999px !important;
+    border: none !important;
+    padding: 0.7rem 1rem !important;
+    font-size: 0.9rem !important;
+    background: transparent !important;
+    color: #111827 !important;
+}
+.stChatInput input::placeholder {
+    color: #9ca3af !important;
+}
+
+.sidebar-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+}
+.sidebar-section {
+    padding: 0.75rem 0.25rem 0.5rem 0.25rem;
+    border-bottom: 1px solid #f3f4f6;
+    margin-bottom: 0.35rem;
+}
+
+.stButton > button {
+    border-radius: 999px !important;
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
+    border: 1px solid #e5e7eb !important;
+    background: #f9fafb !important;
+    color: #111827 !important;
+    padding: 0.45rem 0.9rem !important;
+}
+
+.stMetricContainer {
+    background: #f9fafb !important;
+    border-radius: 0.7rem !important;
+    border: 1px solid #e5e7eb !important;
+    padding: 0.6rem 0.6rem !important;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+</style>
+
+
+<div class="chat-shell">
+  <div class="chat-card">
+    <div class="chat-card-header">
+      <div class="chat-card-header-title">Redis Chat</div>
+      <div class="chat-card-header-sub">Context stored per session ID</div>
+    </div>
+  </div>
+</div>
+
